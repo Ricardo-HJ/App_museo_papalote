@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:979976983604:android:d8cd5903d7ae8de25d6661",
         "android_client_info": {
-          "package_name": "com.example.mipapalote"
+          "package_name": "com.example.App_museo_papalote"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "979976983604-hph6p9gjdg1jc4l6kfn3nl74o0a6eks0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.mipapalote",
+            "package_name": "com.example.App_museo_papalote",
             "certificate_hash": "0a046c33798b78e1c80b10a6ac067a5c8eb0370a"
           }
         },

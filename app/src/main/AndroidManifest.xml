@@ -8,19 +8,16 @@
     <application
         android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
-        android:theme="@android:style/Theme.DeviceDefault"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         android:allowBackup="true"
         android:supportsRtl="true"
         android:enableOnBackInvokedCallback="true"
-        tools:targetApi="tiramisu"
-        tools:ignore="ExtraText">
-        android:icon="@mipmap/ic_launcher"
+        tools:targetApi="tiramisu">
 
-
-        <!-- MainActivity (Actividad principal para Compose) -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

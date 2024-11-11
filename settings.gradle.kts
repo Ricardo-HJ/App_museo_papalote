@@ -15,5 +15,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MiPapalote"
+rootProject.name = "App_museo_papalote"
 include(":app")

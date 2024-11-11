@@ -5,17 +5,18 @@ plugins {
     id("com.google.gms.google-services")
 }
 
+
+
 android {
-    namespace = "com.example.mipapalote"
-    compileSdk = 34
+    namespace = "com.example.App_museo_papalote"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.mipapalote"
-        minSdk = 24
-        targetSdk = 34
+        applicationId = "com.example.App_museo_papalote"
+        minSdk = 23
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -49,27 +50,45 @@ android {
 }
 
 dependencies {
+
+    implementation(libs.androidx.core.ktx.v1120)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.material3)
+
+    // AppCompat dependency
+    implementation(libs.androidx.appcompat.v170)
+
+    // Material Design components
+    implementation(libs.material.v1110)
+
     // Firebase
-    implementation(platform("com.google.firebase:firebase-bom:32.0.0"))
-    implementation("com.google.firebase:firebase-auth:23.0.0")
-    implementation("com.google.firebase:firebase-firestore:25.1.1")
+    implementation(platform(libs.firebase.bom.v3200))
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+
+    implementation(libs.coil.compose)
 
     // Jetpack Compose
-    implementation("androidx.compose.ui:ui:1.7.5")
-    implementation("androidx.compose.material3:material3:1.3.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.7.5")
+    implementation(libs.ui)
+    implementation(libs.androidx.material3)
+    implementation(libs.ui.tooling.preview)
     implementation(libs.androidx.navigation.compose)
 
     // Otros
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
-    implementation("androidx.activity:activity-compose:1.9.3")
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
 
     // Pruebas
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.2.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.7.5")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.7.5")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.5")
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit.v121)
+    androidTestImplementation(libs.androidx.espresso.core.v361)
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
 }
